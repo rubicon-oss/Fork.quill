@@ -15,7 +15,8 @@
     "noEmit": true,
     "strictNullChecks": true,
     "noImplicitAny": true,
-    "noUnusedLocals": true
+    "noUnusedLocals": true,
+    "skipLibCheck": true
   },
   "include": ["./**/*"]
 }
