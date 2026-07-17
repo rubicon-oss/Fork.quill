@@ -1,9 +1,13 @@
 {
   "name": "website",
-  "version": "2.0.4",
+  "version": "2.0.3-patch.1",
   "description": "Quill official website",
   "private": true,
-  "homepage": "https://quilljs.com",
+  "author": "rubicon IT GmbH <www.rubicon.eu>",
+  "contributors": [
+    "Jason Chen <jhchen7@gmail.com> (original Quill author)"
+  ],
+  "homepage": "https://github.com/rubicon-oss/Fork.quill",
   "keywords": [],
   "license": "BSD-3-Clause",
   "scripts": {

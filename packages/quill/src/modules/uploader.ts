@@ -17,13 +17,22 @@ class Uploader extends Module<UploaderOptions> {
     quill.root.addEventListener('drop', (e) => {
       e.preventDefault();
       let native: ReturnType<typeof document.createRange> | null = null;
+      // caretPositionFromPoint is missing from lib.dom.d.ts before TypeScript 5.5
+      const doc = document as Document & {
+        caretPositionFromPoint?: (
+          x: number,
+          y: number,
+        ) => { offsetNode: Node; offset: number } | null;
+      };
       if (document.caretRangeFromPoint) {
         native = document.caretRangeFromPoint(e.clientX, e.clientY);
-      } else if (document.caretPositionFromPoint) {
-        const position = document.caretPositionFromPoint(e.clientX, e.clientY);
-        native = document.createRange();
-        native.setStart(position!.offsetNode, position!.offset);
-        native.setEnd(position!.offsetNode, position!.offset);
+      } else if (doc.caretPositionFromPoint) {
+        const position = doc.caretPositionFromPoint(e.clientX, e.clientY);
+        if (position) {
+          native = document.createRange();
+          native.setStart(position.offsetNode, position.offset);
+          native.setEnd(position.offsetNode, position.offset);
+        }
       }
 
       const normalized = native && quill.selection.normalizeNative(native);

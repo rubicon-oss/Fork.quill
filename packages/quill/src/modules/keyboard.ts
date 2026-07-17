@@ -664,7 +664,7 @@ function makeCodeBlockHandler(indent: boolean): BindingObject {
           } else {
             length += TAB.length;
           }
-        } else if (line.domNode.textContent.startsWith(TAB)) {
+        } else if (line.domNode.textContent?.startsWith(TAB)) {
           line.deleteAt(0, TAB.length);
           if (i === 0) {
             index -= TAB.length;
