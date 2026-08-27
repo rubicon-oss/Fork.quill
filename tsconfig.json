@@ -8,7 +8,7 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "target": "ES2021",
-    "sourceMap": true,
+    "inlineSourceMap": true,
     "declaration": true,
     "module": "ES2020",
     "moduleResolution": "node",

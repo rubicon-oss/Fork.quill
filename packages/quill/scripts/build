@@ -11,7 +11,7 @@ rm -rf $DIST
 mkdir $DIST
 mv $TMPDIR/src/* $DIST
 rm -rf $TMPDIR
-npx babel src --out-dir $DIST --copy-files --no-copy-ignored --extensions .ts --source-maps
+npx babel src --out-dir $DIST --copy-files --no-copy-ignored --extensions .ts --source-maps inline
 npx webpack -- --mode $1
 # https://github.com/webpack-contrib/mini-css-extract-plugin/issues/151
 rm -rf $DIST/dist/*.css.js $DIST/dist/*.css.js.*
