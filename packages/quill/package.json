@@ -1,7 +1,7 @@
 {
-  "name": "@actanova/quill",
-  "version": "2.0.3-patch.2",
-  "description": "Your powerful, rich text editor (Acta Nova fork of Quill 2.0.3)",
+  "name": "@actanova/overquill",
+  "version": "2.1.0",
+  "description": "Overquill - the Acta Nova fork of Quill 2.0.3, with the table and resize modules bundled in",
   "author": "rubicon IT GmbH <www.rubicon.eu>",
   "contributors": [
     "Jason Chen <jhchen7@gmail.com> (original Quill author)"
@@ -49,6 +49,8 @@
     "jsdom": "^22.1.0",
     "mini-css-extract-plugin": "^2.7.6",
     "prettier": "^3.0.3",
+    "quill-resize-module": "^2.1.3",
+    "quill-table-better": "^1.2.3",
     "source-map-loader": "^5.0.0",
     "style-loader": "^3.3.3",
     "stylus": "^0.62.0",
@@ -81,11 +83,11 @@
     "defaults"
   ],
   "scripts": {
-    "build": "./scripts/build production",
+    "build": "node scripts/build.cjs production",
     "lint": "run-s lint:*",
     "lint:eslint": "eslint .",
     "lint:tsc": "tsc --noEmit --skipLibCheck",
-    "start": "[[ -z \"$npm_package_config_ports_webpack\" ]] && webpack-dev-server || webpack-dev-server --port $npm_package_config_ports_webpack",
+    "start": "webpack-dev-server",
     "test": "run-s test:*",
     "test:unit": "vitest --config test/unit/vitest.config.ts",
     "test:fuzz": "vitest --config test/fuzz/vitest.config.ts",

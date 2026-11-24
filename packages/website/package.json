@@ -1,6 +1,6 @@
 {
   "name": "website",
-  "version": "2.0.3-patch.1",
+  "version": "2.0.3-patch.2",
   "description": "Quill official website",
   "private": true,
   "author": "rubicon IT GmbH <www.rubicon.eu>",
@@ -11,11 +11,10 @@
   "keywords": [],
   "license": "BSD-3-Clause",
   "scripts": {
-    "dev": "PORT=$npm_package_config_ports_website next dev",
+    "dev": "node scripts/dev.cjs",
     "start": "npm run dev",
     "build": "next build",
-    "lint": "next lint",
-    "serve": "npm run serve"
+    "lint": "next lint"
   },
   "dependencies": {
     "@codesandbox/sandpack-react": "^2.11.3",

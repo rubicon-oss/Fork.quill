@@ -29,6 +29,10 @@ module.exports = (env) =>
     devtool: 'inline-source-map',
     plugins: [bannerPack, constantPack],
     devServer: {
+      // Set here rather than in the start script so it works in shells without bash syntax.
+      ...(process.env.npm_package_config_ports_webpack && {
+        port: Number(process.env.npm_package_config_ports_webpack),
+      }),
       static: {
         directory: resolve(__dirname, './dist'),
       },
