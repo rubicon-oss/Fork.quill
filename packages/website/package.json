@@ -14,7 +14,8 @@
     "dev": "node scripts/dev.cjs",
     "start": "npm run dev",
     "build": "next build",
-    "lint": "next lint"
+    "lint": "next lint",
+    "serve": "npm run serve"
   },
   "dependencies": {
     "@codesandbox/sandpack-react": "^2.11.3",

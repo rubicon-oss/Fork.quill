@@ -21,13 +21,6 @@
 
 <hr/>
 
-> **This is a fork.** The package published from `packages/quill` is `@actanova/overquill`, the
-> Acta Nova fork of Quill 2.0.3. It adds a single-file build, `quill.full.js`, that bundles
-> [quill-resize-module](https://github.com/mudoo/quill-resize-module) and
-> [quill-table-better](https://github.com/attoae/quill-table-better) — see
-> [packages/quill/README.md](packages/quill/README.md). Everything below is upstream Quill's own
-> README and still describes the editor itself.
-
 [Quill](https://quilljs.com/) is a modern rich text editor built for compatibility and extensibility. It was created by [Jason Chen](https://twitter.com/jhchen) and [Byron Milligan](https://twitter.com/byronmilligan) and actively maintained by [Slab](https://slab.com).
 
 To get started, check out [https://quilljs.com/](https://quilljs.com/) for documentation, guides, and live demos!

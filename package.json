@@ -27,10 +27,10 @@
   },
   "scripts": {
     "build": "run-p build:*",
-    "build:quill": "npm run build -w @actanova/overquill",
+    "build:quill": "npm run build -w @actanova/quill",
     "build:website": "npm run build -w website",
     "start": "run-p start:*",
-    "start:quill": "npm start -w @actanova/overquill",
+    "start:quill": "npm start -w @actanova/quill",
     "start:website": "npm run dev -w website -- --local-quill",
     "lint": "npm run lint -ws"
   },
